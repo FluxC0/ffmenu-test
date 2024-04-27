@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "name": "Burger",
+      "isVegan": false,
+      "isLowCal": false
+    },
+    {
+      "name": "Black Bean Burger",
+      "isVegan": true,
+      "isLowCal": false
+    }
+  ]
+}
