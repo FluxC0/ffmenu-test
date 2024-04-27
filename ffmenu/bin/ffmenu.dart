@@ -69,8 +69,9 @@ void main() {
         chc = spawnMenu();
       case 1:
       List<MenuItem> allItems = parseJsonMenu('/home/runner/Fast-Food-Menu/ffmenu/resources/menu.json');
-      for (var item in allItems) {
-        print("${item.}: ${item.name}");
+      for (var i = 0; i < allItems.length; i++) {
+        var item = allItems[i];
+        print("${i + 1}. ${item}: ${item.name}");
       }
       
       case(2):
