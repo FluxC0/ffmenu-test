@@ -68,16 +68,28 @@ void main() {
       case(0):
         chc = spawnMenu();
       case 1:
-      List<MenuItem> allItems = parseJsonMenu('ffmenu/resources/menu.json');
+      List<MenuItem> allItems = parseJsonMenu('resources/menu.json');
       for (var i = 0; i < allItems.length; i++) {
         var item = allItems[i];
-        print("${i + 1}. ${item}: ${item.name}");
+        print("${i + 1}: ${item.name}");
       }
       
       case(2):
-        // TODO: Stuff..
+        List<MenuItem> allItems = parseJsonMenu('resources/menu.json');
+      for (var i = 0; i < allItems.length; i++) {
+        var item = allItems[i];
+        if (item.isVegan == true) {
+          print("${i+1}: ${item.name}");
+        }
+      }
       case(3):
-        // TODO: Stuff..
+        List<MenuItem> allItems = parseJsonMenu('resources/menu.json');
+        for (var i = 0; i < allItems.length; i++) {
+          var item = allItems[i];
+          if (item.isLowCal == true) {
+            print("${i+1}: ${item.name}");
+          }
+        }
       case(4):
         exit(0);
   }  

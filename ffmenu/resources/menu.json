@@ -9,6 +9,11 @@
       "name": "Black Bean Burger",
       "isVegan": true,
       "isLowCal": false
+    },
+    {
+      "name": "Salad",
+      "isVegan": true,
+      "isLowCal": true
     }
   ]
 }
