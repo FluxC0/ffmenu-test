@@ -14,6 +14,106 @@
       "name": "Salad",
       "isVegan": true,
       "isLowCal": true
+    },
+    {
+        "name": "Cheeseburger",
+        "isVegan": false,
+        "isLowCal": false
+    },
+    {
+        "name": "Caesar Salad",
+        "isVegan": true,
+        "isLowCal": true
+    },
+    {
+        "name": "Margherita Pizza",
+        "isVegan": false,
+        "isLowCal": false
+    },
+    {
+        "name": "Spaghetti Bolognese",
+        "isVegan": false,
+        "isLowCal": false
+    },
+    {
+        "name": "Greek Salad",
+        "isVegan": true,
+        "isLowCal": true
+    },
+    {
+        "name": "Sushi Roll",
+        "isVegan": false,
+        "isLowCal": false
+    },
+    {
+        "name": "Pad Thai",
+        "isVegan": false,
+        "isLowCal": true
+    },
+    {
+        "name": "Eggplant Parmesan",
+        "isVegan": true,
+        "isLowCal": false
+    },
+    {
+        "name": "Chicken Alfredo",
+        "isVegan": false,
+        "isLowCal": false
+    },
+    {
+        "name": "Miso Soup",
+        "isVegan": true,
+        "isLowCal": true
+    },
+    {
+        "name": "Steak Frites",
+        "isVegan": false,
+        "isLowCal": false
+    },
+    {
+        "name": "Poke Bowl",
+        "isVegan": false,
+        "isLowCal": false
+    },
+    {
+        "name": "Tofu Stir-Fry",
+        "isVegan": true,
+        "isLowCal": true
+    },
+    {
+        "name": "Beef Tacos",
+        "isVegan": false,
+        "isLowCal": false
+    },
+    {
+        "name": "Quinoa Salad",
+        "isVegan": true,
+        "isLowCal": true
+    },
+    {
+        "name": "BBQ Ribs",
+        "isVegan": false,
+        "isLowCal": false
+    },
+    {
+        "name": "Cauliflower Wings",
+        "isVegan": true,
+        "isLowCal": true
+    },
+    {
+        "name": "Shrimp Scampi",
+        "isVegan": false,
+        "isLowCal": false
+    },
+    {
+        "name": "Vegetable Curry",
+        "isVegan": true,
+        "isLowCal": true
+    },
+    {
+        "name": "Beef Stroganoff",
+        "isVegan": false,
+        "isLowCal": false
     }
   ]
 }

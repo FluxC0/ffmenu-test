@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:convert';
-
-
+import 'ex.dart';
+var extra = new Extra();
 class MenuItem {
   late String name;
   late bool isVegan;
@@ -34,64 +34,80 @@ void clearConsole() {
   }
 }
 
-
 int spawnMenu() {
-print("""
-###############
-Fast Food Place
-###############
+  print("""
+    ###############
+    Fast Food Place
+    ###############
 
-1. View Items
-2. View Vegan Items
-3. View Low-Calorie Items
-4. Exit
-""");
-print("Select Option");
-int? chc = int.parse(stdin.readLineSync()!);
-if (1 <= chc && chc <= 4) {
-  return chc;
-  
+    1. View Items
+    2. View Vegan Items
+    3. View Low-Calorie Items
+    4. View Random Item
+    5. Exit
+    """);
+  print("Select Option");
+  int chc;
+  try {
+    chc = int.parse(stdin.readLineSync()!);
+    if (chc >= 1 && chc <= 4) {
+      return chc;
+    } else {
+      print("Invalid Choice. Please select a number between 1 and 4.");
+      sleep(Duration(seconds: 3));
+      clearConsole();
+      return 0;
+    }
+  } catch (e) {
+    print("Invalid Choice. Please enter a valid number.");
+    sleep(Duration(seconds: 3));
+    clearConsole();
+    return 0;
+  }
 }
-else {
-  print("Invalid Choice.");
-  sleep(Duration(seconds: 3));
-  clearConsole();
-  return 0;
-} 
-}
-
 void main() {
   int chc = spawnMenu();
 
-
   switch(chc) {
-      case(0):
-        chc = spawnMenu();
+      case 0:
+        // Code for case 0
+        break;
+
       case 1:
-      List<MenuItem> allItems = parseJsonMenu('resources/menu.json');
-      for (var i = 0; i < allItems.length; i++) {
-        var item = allItems[i];
-        print("${i + 1}: ${item.name}");
-      }
-      
-      case(2):
-        List<MenuItem> allItems = parseJsonMenu('resources/menu.json');
-      for (var i = 0; i < allItems.length; i++) {
-        var item = allItems[i];
-        if (item.isVegan == true) {
-          print("${i+1}: ${item.name}");
+        List<MenuItem> allItems1 = parseJsonMenu('resources/menu.json');
+        extra.load(10);
+        for (var i = 0; i < allItems1.length; i++) {
+          var item = allItems1[i];
+          print("${i + 1}: ${item.name}");
         }
-      }
-      case(3):
-        List<MenuItem> allItems = parseJsonMenu('resources/menu.json');
-        for (var i = 0; i < allItems.length; i++) {
-          var item = allItems[i];
+        break;
+
+      case 2:
+        List<MenuItem> allItems2 = parseJsonMenu('resources/menu.json');
+        for (var i = 0; i < allItems2.length; i++) {
+          var item = allItems2[i];
+          if (item.isVegan == true) {
+            print("${i+1}: ${item.name}");
+          }
+        }
+        break;
+
+      case 3:
+        List<MenuItem> allItems3 = parseJsonMenu('resources/menu.json');
+        for (var i = 0; i < allItems3.length; i++) {
+          var item = allItems3[i];
           if (item.isLowCal == true) {
             print("${i+1}: ${item.name}");
           }
         }
-      case(4):
-        exit(0);
-  }  
+        break;
+
+      case 4:
+        extra.randMenuItem();
+        break;
+    case 5:
+      exit(0);
+  }
+  
   
 }
